@@ -15,11 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Value("${com.name}")
-    private String name;
-
-    @Value("${com.age}")
-    private String age;
 
     @RequestMapping("/")
     public  String index(){

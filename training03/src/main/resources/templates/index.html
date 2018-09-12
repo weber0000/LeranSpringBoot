@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>学习啦</title>
+</head>
+<body>
+<div style="text-align: center;margin:0 auto;width: 1000px; ">
+    <h1>学习资源</h1>
+    <table width="100%" border="1" cellspacing="1" cellpadding="0">
+        <tr>
+            <td>序号</td>
+            <td>作者</td>
+            <td>教程名称</td>
+            <td>地址</td>
+        </tr>
+
+        <tr th:each="learn,learnStat : ${learnList} ">
+            <td th:text="${learnStat.count}">${learnStat.count}</td>
+            <td th:text="${learn.author}">${learn.author}</td>
+            <td th:text="${learn.title}">${learn.title}</td>
+            <td><a th:href="${learn.url}" target="_blank">点我</a></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
